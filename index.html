@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helen Caron — AI Systems That Finally Work | HugMuni Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15171A;--ink-soft:#5A6068;--red:#EC3B2B;--red-deep:#CE2C1D;
+    --blue-deep:#0A3A66;--blue:#1E73B8;--sky:#36A6E0;
+    --paper:#FFFFFF;--mist:#F4F5F6;--line:#E4E6E8;--maxw:1180px;
+    --hero:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_132923_02c2d34c-d2d4-4f32-8007-c901a06ab1d0.png');
+    --logo:url('https://dashboard.katalyst-crm.com/files/t1/Group%202.png');
+    --slide1:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_150854_ef280114-2c00-48fa-8812-9f1db851560d.png');
+    --slide2:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_150901_8c8f7ba7-76e0-4138-bb80-04670fed2780.png');
+    --slide3:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_150907_d7604ea6-0460-46a8-8bf5-dfdd6dd87eec.png');
+    --slide4:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_150914_e40770b2-96dc-4557-a61c-b0d45f52b9c0.png');
+    --about-photo:url('https://dashboard.katalyst-crm.com/files/t1/Aragon-Favorites-Helen-Caron-15.jpeg');
+    --notebook:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_124610_3ef829f9-5d92-4754-85e1-cdfcc6e3d755.png');
+    --img-a:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1781092413/hf_20260610_095610_7d634008-4cfe-47b5-82b4-2f0a45f65354_min_egfcia.webp');
+    --img-b:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_132942_a5398b7a-baa0-4160-b181-f0361162e159.png');
+    --img-c:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1781092413/hf_20260610_095619_bfb1b096-f128-4cd6-9b94-7b58c15e5553_min_mzro9u.webp');
+    --img-d:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_132933_dca36d78-1cf9-42b1-9cba-af58df9a38e9.png');
+    --img-e:url('https://d8j0ntlcm91z4.cloudfront.net/user_35NBuSfIPglHIOMZxxqoxDRFcyj/hf_20260610_143526_d7a47a03-e876-49b5-903b-058f498d02bd.png');
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.07;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  .eyebrow{font-family:'Space Grotesk',sans-serif;font-size:13.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--red);display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+  .eyebrow.on-dark,.eyebrow.on-red{color:#fff}.eyebrow.on-dark::before,.eyebrow.on-red::before{background:#fff}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;padding:15px 24px;transition:background .25s,transform .25s;border:0;cursor:pointer;line-height:1.2}
+  .btn:hover{background:var(--red-deep);transform:translateY(-2px)}
+  .btn.dark{background:var(--ink)}.btn.dark:hover{background:#000}
+  .link-more{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;color:var(--red);display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid var(--red);padding-bottom:3px;transition:gap .25s}
+  .link-more:hover{gap:14px}
+  .link-more.on-dark{color:#fff;border-color:#fff}
+  .cta-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:30px}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  .sec{padding:84px 0}
+  .sec-head .eyebrow{margin-bottom:16px}
+  .sec-head h2{font-size:clamp(28px,3.6vw,44px);max-width:26ch}
+
+  /* NAV */
+  header.nav{position:absolute;top:0;left:0;right:0;z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;max-width:var(--maxw);margin:0 auto}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:#fff;display:flex;align-items:center;gap:11px}
+  .brand .dot{width:11px;height:11px;background:var(--red);display:inline-block}
+  .brand small{display:block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;opacity:.7;margin-top:2px}
+  nav.menu{display:flex;gap:26px;align-items:center}
+  nav.menu a{color:#fff;font-size:13px;font-weight:500;opacity:.9;position:relative;padding:4px 0}
+  nav.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--red);transition:width .25s}
+  nav.menu a:hover::after{width:100%}
+  nav.menu a.nav-cta{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--ink)!important;opacity:1!important;border:0;padding:15px 24px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;transition:background .25s,transform .25s;line-height:1.2}nav.menu a.nav-cta:hover{background:rgba(255,255,255,.88);transform:translateY(-2px)}nav.menu a.nav-cta::after{display:none}
+  .brand .lockup{filter:brightness(0) invert(1)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
+  .burger span{width:26px;height:2px;background:#fff;display:block}
+
+  /* HERO */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;color:#fff;overflow:hidden;background:var(--blue-deep)}
+  .hero-slides{position:absolute;inset:0;z-index:0}
+  .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;
+    animation:slidefade 32s infinite, kenburns 32s ease-in-out infinite;will-change:opacity,transform}
+  .hero-slide:nth-child(1){background-image:var(--slide1);animation-delay:0s,0s}
+  .hero-slide:nth-child(2){background-image:var(--slide2);animation-delay:8s,8s}
+  .hero-slide:nth-child(3){background-image:var(--slide3);animation-delay:16s,16s}
+  .hero-slide:nth-child(4){background-image:var(--slide4);animation-delay:24s,24s}
+  @keyframes slidefade{
+    0%{opacity:0} 4%{opacity:1} 25%{opacity:1} 31%{opacity:0} 100%{opacity:0}
+  }
+  @keyframes kenburns{
+    0%{transform:scale(1) translateX(0)}
+    31%{transform:scale(1.1) translateX(-1.5%)}
+    100%{transform:scale(1.1) translateX(-1.5%)}
+  }
+  .hero-veil{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(8,40,72,.84) 0%,rgba(10,58,102,.72) 55%,rgba(8,40,72,.88) 100%)}
+  .hero .wrap{width:100%;position:relative;z-index:2;padding-top:130px;padding-bottom:130px;
+    display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero .eyebrow.on-dark{justify-content:center;margin-bottom:22px}
+  .hero .eyebrow.on-dark::after{content:"";width:28px;height:2px;background:#fff}
+  .hero h1{font-size:clamp(28px,5.4vw,70px);font-weight:700;max-width:27ch;letter-spacing:-.03em;margin:0 auto}
+  .hero h1 .accent{color:#fff}
+  .hero .sub{margin:26px auto 0;max-width:80ch;font-size:16.5px;color:#fff;font-weight:400}
+  .hero .sub p{margin-bottom:12px}
+  .hero .cta-row{justify-content:center}
+  .hero .ghost{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;color:#fff;display:inline-flex;align-items:center;gap:9px;opacity:.92}
+  .hero .ghost .arr{transition:transform .25s}.hero .ghost:hover .arr{transform:translateX(6px)}
+  .hero-foot{position:absolute;left:0;right:0;bottom:28px;z-index:3}
+  .hero-foot .wrap{padding-top:0;padding-bottom:0;flex-direction:row;text-align:left}
+  @media(prefers-reduced-motion:reduce){
+    .hero-slide{animation:none;opacity:0}
+    .hero-slide:nth-child(1){opacity:1}
+  }
+  .hero-foot .wrap{display:flex;gap:22px;align-items:center}
+  .hero-foot span{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.16em;color:rgba(255,255,255,.6)}
+  .hero-foot .now{color:#fff;border-bottom:2px solid var(--red);padding-bottom:3px}
+
+  /* CREDIBILITY */
+  .cred-grid{display:grid;grid-template-columns:0.82fr 1.18fr;gap:60px;align-items:center}
+  .cred-photo{position:relative}
+  .cred-photo .ph{aspect-ratio:4/5;background:var(--notebook);background-size:cover;background-position:center}
+  .cred-photo .tab{position:absolute;right:-20px;bottom:30px;background:var(--red);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;padding:15px 20px;max-width:200px;line-height:1.4}
+  .cred-text h2{font-size:clamp(27px,3.4vw,42px);margin:14px 0 22px;max-width:20ch}
+  .cred-text p{color:var(--ink-soft);font-size:15.5px;margin-bottom:16px;max-width:52ch}
+  .cred-text p strong{color:var(--ink);font-weight:600}
+
+  /* PROBLEM */
+  .problem{background:var(--mist)}
+  .problem-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:start}
+  .problem h2{font-size:clamp(27px,3.6vw,44px);max-width:23ch;margin:14px 0 20px}
+  .problem .intro{color:var(--ink-soft);font-size:16px;max-width:58ch;margin-bottom:30px}
+  .problem-photo{position:sticky;top:36px}
+  .problem-photo .ph{aspect-ratio:4/5;background:var(--img-e);background-size:cover;background-position:center}
+  .problem-photo::before{content:"";position:absolute;left:-16px;top:-16px;width:90px;height:90px;background:var(--red);z-index:0}
+  .problem-photo .ph{position:relative;z-index:1}
+  .problem-photo .cap{margin-top:16px;font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--ink-soft);display:flex;gap:10px;align-items:center}
+  .problem-photo .cap::before{content:"";width:18px;height:2px;background:var(--red)}
+  .leaks{list-style:none;max-width:820px;margin-bottom:36px;border-top:1px solid var(--line)}
+  .leaks li{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:15.5px;align-items:flex-start}
+  .leaks li .dash{color:var(--red);font-weight:700;font-family:'Space Grotesk',sans-serif;flex:0 0 auto}
+  .punch{background:var(--ink);color:#fff;padding:38px 42px;max-width:820px;position:relative}
+  .punch::before{content:"";position:absolute;left:0;top:0;width:6px;height:100%;background:var(--red)}
+  .punch p{font-size:16.5px;margin-bottom:14px}.punch p:last-child{margin-bottom:0;color:rgba(255,255,255,.75)}
+  .punch .em{color:var(--sky);font-weight:600}
+
+  /* PROOF */
+  .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .proof-head{grid-column:1/-1;display:flex;flex-direction:column;margin-bottom:8px}
+  .proof-head .eyebrow{margin-bottom:14px}
+  .proof-head h2{font-size:clamp(28px,3.6vw,44px);max-width:26ch;margin:0;letter-spacing:-.02em}
+  .quote-card{background:var(--mist);padding:26px 24px 24px;display:flex;flex-direction:column}
+  .quote-card .mark{font-family:'Space Grotesk',sans-serif;font-size:44px;line-height:.6;color:var(--red);font-weight:700;margin-bottom:10px}
+  .quote-card p{font-size:14px;color:var(--ink);margin-bottom:16px;flex:1;line-height:1.55}
+  .quote-card .who{font-family:'Space Grotesk',sans-serif;font-size:11.5px;font-weight:600;color:var(--ink-soft);border-top:2px solid var(--ink);padding-top:11px}
+
+  /* NUMBERS */
+  .numbers{position:relative;background:
+    linear-gradient(100deg,rgba(10,58,102,.96) 0%,rgba(10,58,102,.88) 55%,rgba(10,58,102,.72) 100%),
+    var(--img-b);background-size:cover;background-position:center;color:#fff}.numbers .sec-head h2{color:#fff}
+  .num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 34px;margin-top:46px}
+  .num{position:relative;padding-left:22px}
+  .num::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:4px;background:var(--red)}
+  .num .n{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,4.4vw,56px);font-weight:700;line-height:1;letter-spacing:-.02em}
+  .num .l{font-size:13.5px;color:rgba(255,255,255,.74);margin-top:11px;max-width:28ch}
+
+  /* TABLE */
+  .cmp{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);margin-top:42px}
+  .cmp .ch{padding:20px 28px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase}
+  .cmp .ch.bad{background:var(--mist);color:var(--ink-soft);border-bottom:1px solid var(--line)}
+  .cmp .ch.good{background:var(--red);color:#fff;border-bottom:1px solid var(--red)}
+  .cmp .cell{padding:20px 28px;font-size:14.5px;border-bottom:1px solid var(--line)}
+  .cmp .cell.bad{color:var(--ink-soft);border-right:1px solid var(--line)}
+  .cmp .cell.good{color:var(--ink);font-weight:500}
+  .cmp .row:last-child .cell{border-bottom:0}
+
+  /* ACCORDION (services + framework) */
+  .acc{margin-top:30px;border-top:2px solid var(--ink)}
+  .acc details{border-bottom:1px solid var(--line)}
+  .acc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px 1fr 28px;gap:18px;align-items:center;padding:24px 0}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc .acc-no{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--red);line-height:1}
+  .acc .acc-ttl{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;display:flex;flex-wrap:wrap;gap:12px;align-items:baseline}
+  .acc .acc-ttl em{font-style:normal;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--blue)}
+  .acc .acc-pl{justify-self:end;color:var(--red);font-size:24px;line-height:1;transition:transform .25s}
+  .acc details[open] .acc-pl{transform:rotate(45deg)}
+  .acc .acc-body{padding:2px 28px 28px 70px;animation:fade .3s ease}
+  .acc .acc-body .desc{font-size:15px;color:var(--ink-soft);margin-bottom:18px;max-width:64ch}
+  .svc-meta{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:720px}
+  .svc-meta .k{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:6px;font-weight:600}
+  .svc-meta .v{font-size:14px;color:var(--ink)}
+  @keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+  .svc-intro{color:var(--ink-soft);font-size:16px;max-width:58ch;margin:16px 0 0}
+  .head-2col{display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:end}
+  .head-2col .sec-head h2{max-width:none}
+  .head-2col .svc-intro,.head-2col .fw-sub{margin:0;padding-bottom:6px}
+
+  /* CAROUSEL SERVICES */
+  .sec-svc{padding:84px 0;background:var(--mist)}
+  .sec-svc .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .carousel-wrap{position:relative;margin-top:44px;overflow:hidden}
+  .carousel{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
+  .c-card{min-width:100%;display:grid;grid-template-columns:0.44fr 0.56fr;background:#fff}
+  .c-img{background-color:var(--blue-deep);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;min-height:420px;position:relative;overflow:hidden}
+  .c-img::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,58,102,.55),rgba(30,115,184,.35));z-index:1}
+  .c-img::after{content:"";position:absolute;inset:20px;border:1px solid rgba(255,255,255,.15);z-index:2}
+  .c-img-label{position:relative;z-index:3;font-family:'Space Grotesk',sans-serif;font-size:clamp(72px,9vw,120px);font-weight:700;color:rgba(255,255,255,.12);letter-spacing:-.04em}
+  .c-body{padding:48px 48px 44px;display:flex;flex-direction:column;justify-content:center}
+  .c-body .no{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;color:var(--red)}
+  .c-body h3{font-size:clamp(22px,2.6vw,30px);font-weight:600;margin:12px 0 4px;font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.15}
+  .c-body .tag{font-size:14px;font-weight:500;color:var(--blue);display:block;margin-bottom:16px}
+  .c-body .desc{font-size:15px;color:var(--ink-soft);margin-bottom:24px;max-width:52ch;line-height:1.7}
+  .c-body .svc-meta{display:grid;grid-template-columns:1fr;gap:18px}
+  .c-body .svc-meta .k{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:5px;font-weight:600}
+  .c-body .svc-meta .v{font-size:14px;color:var(--ink);line-height:1.6}
+  .carousel-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:28px;padding:0 28px}
+  .c-arrow{width:46px;height:46px;border:2px solid var(--ink);background:none;font-size:18px;cursor:pointer;display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;transition:background .2s,color .2s,transform .2s}
+  .c-arrow:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+  .c-dots{display:flex;gap:8px}
+  .c-dot{width:10px;height:10px;border-radius:0;background:var(--line);border:0;cursor:pointer;padding:0;transition:background .25s,transform .25s}
+  .c-dot.active{background:var(--red);transform:scale(1.2)}
+
+  /* FRAMEWORK (red + dark grey, icon cards) */
+  .framework{background:#1E2125;color:#fff}
+  .framework .sec-head h2{color:#fff;font-size:clamp(30px,4.2vw,54px);letter-spacing:-.03em;max-width:none}
+  .fw-head{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:760px;margin:0 auto}
+  .fw-head .eyebrow{justify-content:center}
+  .fw-head .fw-sub{margin-top:16px}
+  .fw-sub{color:rgba(255,255,255,.62);font-size:16px;max-width:60ch;margin-top:16px}
+  .fw-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:40px}
+  .fw-card{background:#26292E;padding:28px 26px 26px;border-top:3px solid var(--red);transition:transform .25s ease,background .25s ease;grid-column:span 2}
+  .fw-card:hover{transform:translateY(-4px);background:var(--red);border-top-color:#fff}
+  .fw-card:hover .icon{background:#fff}
+  .fw-card:hover .icon svg{stroke:var(--red)}
+  .fw-card:hover .tagl{color:rgba(255,255,255,.85)}
+  .fw-card:hover .desc{color:rgba(255,255,255,.92)}
+  .fw-card:hover .have{border-top-color:rgba(255,255,255,.3)}
+  .fw-card:hover .have b{color:#fff}
+  .fw-card:nth-child(4){grid-column:2 / span 2}
+  .fw-card:nth-child(5){grid-column:4 / span 2}
+  .fw-card .icon{width:48px;height:48px;background:var(--red);display:grid;place-items:center;margin-bottom:16px;transition:background .25s ease}
+  .fw-card .icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s ease}
+  .fw-card .nm{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;letter-spacing:-.01em;display:block;margin:0 0 4px}
+  .fw-card .tagl{font-size:14px;font-weight:500;color:rgba(255,255,255,.6);display:block;margin-bottom:13px;transition:color .25s ease}
+  .fw-card .desc{font-size:15.5px;color:rgba(255,255,255,.7);margin-bottom:16px;max-width:none;line-height:1.6;transition:color .25s ease}
+  .fw-card .have{font-size:14px;color:#fff;border-top:1px solid rgba(255,255,255,.12);padding-top:13px;transition:border-color .25s ease}
+  .fw-card .have b{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FF6B5B;font-weight:600;display:block;margin-bottom:4px;transition:color .25s ease}
+  .acc.dark{border-top-color:rgba(255,255,255,.25)}
+  .acc.dark details{border-bottom-color:rgba(255,255,255,.14)}
+  .acc.dark .acc-ttl{color:#fff}
+  .acc.dark .acc-ttl em{color:var(--sky)}
+  .acc.dark .acc-body .desc{color:rgba(255,255,255,.7)}
+  .acc.dark .have{font-size:13.5px;color:#fff}
+  .acc.dark .have b{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);font-weight:600;display:block;margin-bottom:4px}
+  .fw-quote{margin-top:46px;border-left:6px solid var(--red);padding:6px 0 6px 28px;max-width:58ch}
+  .fw-quote p{font-family:'Space Grotesk',sans-serif;font-size:clamp(19px,2.2vw,26px);font-weight:500;line-height:1.32;color:#fff}
+  .fw-quote .who{margin-top:12px;font-size:13px;color:rgba(255,255,255,.6)}
+
+  /* FIT */
+  .fit-cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px}
+  .fit-card{padding:34px 30px;border-top:4px solid var(--red)}
+  .fit-card.no{border-top-color:var(--ink-soft)}
+  .fit-card h3{font-size:19px;margin-bottom:20px;font-weight:600}
+  .fit-card ul{list-style:none;display:grid;gap:15px}
+  .fit-card li{display:flex;gap:13px;font-size:14.5px;align-items:flex-start}
+  .fit-card .mk{flex:0 0 auto;font-weight:700;font-family:'Space Grotesk',sans-serif}
+  .fit-card.yes .mk{color:var(--red)}.fit-card.no .mk{color:var(--ink-soft)}.fit-card.no li{color:var(--ink-soft)}
+  .faq-sec{background:var(--red);padding:84px 0;color:#fff}
+  .faq{max-width:960px;margin:0 auto}
+  .faq .eyebrow.on-red{margin-bottom:16px}
+  .faq h3{font-size:clamp(28px,3.6vw,44px);margin-bottom:36px;color:#fff;letter-spacing:-.02em}
+  .faq details{border-top:1px solid rgba(255,255,255,.3)}.faq details:last-child{border-bottom:1px solid rgba(255,255,255,.3)}
+  .faq summary{list-style:none;cursor:pointer;padding:26px 0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(18px,2vw,22px);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#fff}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .pl{color:#fff;font-size:26px;transition:transform .25s;flex:0 0 auto}
+  .faq details[open] summary .pl{transform:rotate(45deg)}
+  .faq .ans{padding:0 0 28px;font-size:17px;color:rgba(255,255,255,.85);max-width:70ch;line-height:1.7}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 0.74fr;gap:56px;align-items:start}
+  .about-text h2{font-size:clamp(23px,3.2vw,38px);max-width:28ch;margin:14px 0 24px}
+  .about-text p{font-size:15.5px;color:var(--ink);margin-bottom:16px;max-width:58ch}
+  .about-text p.lede{font-size:18px;font-weight:500}
+  .about-quote{margin:30px 0;background:var(--blue-deep);color:#fff;padding:34px 36px}
+  .about-quote p{font-family:'Space Grotesk',sans-serif;font-size:clamp(18px,2.1vw,24px);font-weight:500;line-height:1.32;color:#fff;max-width:none}
+  .about-quote .who{margin-top:12px;font-size:13px;color:rgba(255,255,255,.62)}
+  .story{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+  .story summary{list-style:none;cursor:pointer;padding:18px 0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--red);display:flex;align-items:center;gap:10px}
+  .story summary::-webkit-details-marker{display:none}
+  .story summary .pl{font-size:20px;transition:transform .25s}
+  .story[open] summary .pl{transform:rotate(45deg)}
+  .story .story-body{padding-bottom:20px;animation:fade .3s ease}
+  .about-side{position:sticky;top:36px}
+  .about-side .ph{aspect-ratio:3/4;background:var(--about-photo);background-size:cover;background-position:center}
+  .about-side .run{font-size:13.5px;color:var(--ink-soft);margin-top:20px;border-left:3px solid var(--red);padding-left:15px}
+
+  /* MISSION */
+  .mission{background:var(--red);color:#fff}
+  .mv-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:42px;border-top:1px solid rgba(255,255,255,.3)}
+  .mv{padding:36px 30px 8px;border-right:1px solid rgba(255,255,255,.3)}.mv:last-child{border-right:0}
+  .mv h3{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;opacity:.85}
+  .mv p{font-size:15.5px;line-height:1.6;color:#fff}
+
+  /* FITCALL */
+  .fitcall{background:var(--mist)}
+  .fitcall-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start}
+  .fitcall h2{font-size:clamp(27px,3.4vw,42px);max-width:18ch;margin:14px 0 0}
+  .fitcall-photo{margin-top:30px;position:relative}
+  .fitcall-photo .ph{aspect-ratio:4/3;background:var(--img-c);background-size:cover;background-position:center}
+  .fitcall .body{font-size:16px;color:var(--ink-soft);margin-bottom:24px}
+  .fitcall ol{list-style:none;border-top:1px solid var(--line);margin-bottom:24px}
+  .fitcall ol li{display:flex;gap:15px;padding:17px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:flex-start}
+  .fitcall ol li .dash{color:var(--red);font-weight:700;font-family:'Space Grotesk',sans-serif}
+  .fitcall .fine{font-size:14px;color:var(--ink-soft)}
+
+  /* FINAL */
+  .final{position:relative;overflow:hidden;color:#fff;
+    background:linear-gradient(105deg,rgba(10,58,102,.95) 0%,rgba(10,58,102,.86) 55%,rgba(10,58,102,.66) 100%),
+    var(--img-d);background-size:cover;background-position:center}
+  .final .wrap{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .final h2{font-size:clamp(31px,4.8vw,60px);color:#fff;max-width:19ch;letter-spacing:-.03em}
+  .final .body{font-size:16.5px;color:rgba(255,255,255,.82);max-width:60ch;margin:22px auto 26px}
+  .final ul{list-style:none;display:grid;gap:13px;max-width:600px;margin:0 auto 8px}
+  .final ul li{display:flex;gap:13px;font-size:15.5px;align-items:flex-start;text-align:left}
+  .final ul li .dash{color:var(--sky);font-weight:700;font-family:'Space Grotesk',sans-serif}
+  .final .cta-row{justify-content:center}
+
+  /* FOOTER */
+  footer.site{background:var(--ink);color:#fff;padding:72px 0 32px}
+  .foot-logo{display:flex;align-items:center;gap:22px}
+  .lockup{display:block;height:46px;width:auto}
+  .foot-logo .lockup.big{height:46px}
+  .foot-logo .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);letter-spacing:.04em;line-height:1}
+  .foot-logo .wordmark small{display:block;font-size:11px;letter-spacing:.32em;font-weight:500;color:rgba(255,255,255,.55);margin-top:10px}
+  .brand .emblem{width:38px;height:38px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-top:54px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
+  .foot-brand .brand{color:#fff;margin-bottom:14px}
+  .foot-brand p{font-size:13.5px;color:rgba(255,255,255,.6);max-width:34ch;line-height:1.8}
+  .foot-col h5{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:16px;opacity:.7}
+  .foot-col a{display:block;font-size:13.5px;color:rgba(255,255,255,.6);margin-bottom:10px;transition:color .2s}
+  .foot-col a:hover{color:var(--red)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:rgba(255,255,255,.5)}
+
+  /* RESPONSIVE */
+  @media(max-width:960px){
+    .cred-grid,.about-grid,.fitcall-grid,.problem-grid{grid-template-columns:1fr;gap:38px}
+    .head-2col{grid-template-columns:1fr;gap:14px;align-items:start}
+    .problem-photo{position:static;max-width:440px}
+    .about-side{position:static;max-width:420px}
+    .num-grid{grid-template-columns:1fr 1fr}
+    .fw-grid{grid-template-columns:1fr 1fr}
+    .fw-card,.fw-card:nth-child(4),.fw-card:nth-child(5){grid-column:auto}
+    .fitcall-photo{max-width:480px}
+    .mv-grid{grid-template-columns:1fr}
+    .mv{border-right:0;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:28px}
+  }
+  @media(max-width:720px){
+    .sec{padding:64px 0}
+    nav.menu{position:fixed;inset:0;background:var(--blue-deep);flex-direction:column;justify-content:center;gap:24px;transform:translateX(100%);transition:transform .4s;z-index:60}
+    nav.menu.open{transform:none}nav.menu a{font-size:20px}
+    .burger{display:flex;z-index:70}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .num-grid,.proof-grid,.fit-cols,.svc-meta,.fw-grid,.head-2col{grid-template-columns:1fr}
+    .proof-head{grid-column:auto}
+    .fw-card,.fw-card:nth-child(4),.fw-card:nth-child(5){grid-column:auto}
+    .c-card{grid-template-columns:1fr}.c-img{min-height:220px}
+    .c-body{padding:30px 24px 34px}
+    .cmp{grid-template-columns:1fr}
+    .cmp .ch.bad,.cmp .cell.bad{border-right:0}.cmp .ch.bad{border-top:0}.cmp .cell.bad{background:var(--mist)}
+    .acc .acc-body{padding-left:0}
+    .foot-grid{grid-template-columns:1fr}
+    .cred-photo .tab{right:12px}.punch{padding:30px 24px}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><img class="lockup" src="https://dashboard.katalyst-crm.com/files/t1/Group%202.png" alt="Helen Caron"></a>
+    <nav class="menu" id="menu">
+      <a href="#problem">The problem</a>
+      <a href="#services">Services</a>
+      <a href="#framework">Framework</a>
+      <a href="#about">About</a>
+      <a href="#fitcall" class="nav-cta">Book a fit call</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- 1 HERO -->
+<section class="hero" id="top">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal" style="display:flex;flex-direction:column;align-items:center">
+      <span class="eyebrow on-dark">AI systems for mid-sized business</span>
+      <h1>You don't need more AI tools. You need a system that <span class="accent">finally works.</span></h1>
+      <div class="sub">
+        <p>You've bought the platforms and run the pilots. The problem was never the technology.</p>
+        <p>Helen Caron designs AI systems that run inside the business — built around the people who use them. 35 years in tech, with senior roles at Lockheed Martin and Deloitte.</p>
+      </div>
+      <div class="cta-row">
+        <a href="#fitcall" class="btn">Book your AI Profit Assessment →</a>
+        <a href="#framework" class="ghost">See the framework <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-foot"><div class="wrap"><span class="now">EN</span><span>01 — 14</span></div></div>
+</section>
+
+<!-- 2 CREDIBILITY -->
+<section class="sec" id="about-snapshot">
+  <div class="wrap">
+    <div class="cred-grid">
+      <div class="cred-photo reveal">
+        <div class="ph"></div>
+        <div class="tab">Built by hand, in a notebook — before it touches a slide.</div>
+      </div>
+      <div class="cred-text reveal">
+        <span class="eyebrow">credibility snapshot</span>
+        <h2>Built in the trenches. Not in decks.</h2>
+        <p>Helen has spent 35 years inside the systems most consultants only diagram — including her first AI expert system in the early 1990s, before AI was a marketing term. <strong>11 years at a Big 4 firm, 23 in aerospace and defense, senior leadership at Lockheed Martin and Deloitte.</strong></p>
+        <p>She's run the full software lifecycle, from systems engineer to senior director. She can do the math on your margin and design the workflow in the same meeting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 PROBLEM -->
+<section class="sec problem" id="problem">
+  <div class="wrap">
+    <div class="problem-grid">
+      <div>
+        <div class="reveal">
+          <span class="eyebrow">problem diagnosis</span>
+          <h2>You're not behind on AI. You're buried under it.</h2>
+          <p class="intro">You bought the tools, ran the pilots, maybe hired a consultant. Eighteen months later, here's the reality:</p>
+        </div>
+        <ul class="leaks reveal">
+          <li><span class="dash">—</span><span>Three AI subscriptions across three teams, none of them talking to each other.</span></li>
+          <li><span class="dash">—</span><span>A process automated before anyone mapped it — so it fails faster than before.</span></li>
+          <li><span class="dash">—</span><span>A finance lead who can't tell which workflow is leaking margin and which is just annoying.</span></li>
+          <li><span class="dash">—</span><span>New hires who assume AI is in the stack; senior staff quietly worried it's coming for their jobs.</span></li>
+          <li><span class="dash">—</span><span>Another vendor email every week, promising the thing that finally fixes it.</span></li>
+        </ul>
+        <div class="punch reveal">
+          <p>You don't need another tool. Adding AI to a broken process doesn't fix it — <span class="em">it breaks it at machine speed.</span></p>
+          <p>That's Helen's work: process first, then AI, people at the center. The only sequence she's seen work in 35 years.</p>
+        </div>
+        <div class="cta-row reveal"><a href="#fitcall" class="btn">Find your profit leaks →</a></div>
+      </div>
+      <div class="problem-photo reveal">
+        <div class="ph"></div>
+        <div class="cap">Eighteen months in — and noisier than ever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 PROOF -->
+<section class="sec" id="proof">
+  <div class="wrap">
+    <div class="proof-grid reveal">
+      <div class="proof-head">
+        <span class="eyebrow">proof</span>
+        <h2>What changed when the system finally worked.</h2>
+      </div>
+      <div class="quote-card"><div class="mark">"</div><p>We increased sales 200%, added $7M in revenue, and lifted retention 20%. She doesn't hand over a strategy and leave — she stays in the room until it ships.</p><div class="who">Chief Product Officer, cybersecurity company</div></div>
+      <div class="quote-card"><div class="mark">"</div><p>Onboarding took up to eight months. Helen redesigned and automated it. We went from eight months to forty-five days, and saved 49,000 hours.</p><div class="who">Managing Director, enterprise software practice</div></div>
+      <div class="quote-card"><div class="mark">"</div><p>She knows AI deeply, but the rare thing is how she explains it. No jargon, no fear. Our team went from seeing AI as a threat to using it daily.</p><div class="who">Executive Director, nonprofit foundation</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 NUMBERS -->
+<section class="sec numbers" id="numbers">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow on-dark">the numbers</span><h2>The receipts.</h2></div>
+    <div class="num-grid reveal">
+      <div class="num"><div class="n">200%</div><div class="l">Sales lift for one cybersecurity client through workflow redesign and AI automation.</div></div>
+      <div class="num"><div class="n">$7M</div><div class="l">Net new revenue for that same client during the engagement.</div></div>
+      <div class="num"><div class="n">49,000</div><div class="l">Hours reclaimed by redesigning one onboarding workflow — before any AI.</div></div>
+      <div class="num"><div class="n">8 → 45</div><div class="l">Months to days. The same rebuild, time-to-live compressed.</div></div>
+      <div class="num"><div class="n">$600K+</div><div class="l">Direct client savings across engagements in the past five years.</div></div>
+      <div class="num"><div class="n">35</div><div class="l">Years inside the systems most consultants only describe.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 PLAYBOOK -->
+<section class="sec" id="playbook">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">why the playbook fails</span><h2>Most AI projects fail the same way. Here's the sequence that doesn't.</h2></div>
+    <div class="cmp reveal">
+      <div class="ch bad">What usually happens</div>
+      <div class="ch good">What happens with Helen</div>
+      <div class="row" style="display:contents"><div class="cell bad">You're sold a tool, then told to fit it into your business.</div><div class="cell good">The goal comes first. The tool gets chosen last, once the workflow says what it needs.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">A consultant maps your process, hands you a deck, and vanishes at implementation.</div><div class="cell good">Helen runs the whole arc, Forecast through Fuel — including training and KPI tracking after launch.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">AI gets bolted onto a broken process, which now fails at machine speed.</div><div class="cell good">Process gaps get fixed first. At Deloitte, that one principle saved 49,000 hours.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">Your team is told to embrace the tool. Adoption stalls by week three.</div><div class="cell good">Your team helps design the workflow. Adoption is built in, not bolted on.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">Success is measured by tools deployed.</div><div class="cell good">Success is measured by margin, hours reclaimed, and your next board deck.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">AI is treated like an IT project — one problem at a time.</div><div class="cell good">AI is treated as a profit system, each automation building on the last.</div></div>
+    </div>
+    <div class="cta-row reveal"><a href="#fitcall" class="btn">Book your AI Profit Assessment →</a><a href="#fitcall" class="link-more">Start with a 30-min fit call <span>→</span></a></div>
+  </div>
+</section>
+
+<!-- 7 SERVICES -->
+<section class="sec-svc" id="services">
+  <div class="wrap reveal">
+    <div class="head-2col">
+      <div class="sec-head"><span class="eyebrow">services</span><h2>Five entry points. One system.</h2></div>
+      <p class="svc-intro">Each service is a stage of the FutureFlow Profit Framework. Most clients start with the Assessment, then move forward as the data warrants. Nothing gets forced.</p>
+    </div>
+  </div>
+  <div class="carousel-wrap reveal">
+    <div class="carousel" id="svcCarousel">
+      <!-- Card 1 -->
+      <div class="c-card">
+        <div class="c-img" style="background-image:url('https://dashboard.katalyst-crm.com/files/t1/27b25a3fbb540e6b0370a91b2da2ad55%20(1)%201.png')"><span class="c-img-label">01</span></div>
+        <div class="c-body">
+          <span class="no">01</span>
+          <h3>AI Profit Assessment Intensive</h3>
+          <span class="tag">The starting line.</span>
+          <p class="desc">Maps where profit is leaking, where AI recovers margin fastest, and what to fix before any tool is bought.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a Profit Journey Roadmap, a quick-win recommendation, and a follow-up review.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to invest who won't spend before they know the real ROI.</div></div></div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="c-card">
+        <div class="c-img" style="background-image:url('https://dashboard.katalyst-crm.com/files/t1/79168a9e77c7394a3357fa55a5b181ce.jpg')"><span class="c-img-label">02</span></div>
+        <div class="c-body">
+          <span class="no">02</span>
+          <h3>AI Automation Flow Design</h3>
+          <span class="tag">Workflows become revenue engines.</span>
+          <p class="desc">One high-friction workflow, turned into a clean, ROI-quantified automation blueprint, ready to build.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a workflow map, an ROI brief, and a breakeven timeline.</div></div><div><div class="k">Best for</div><div class="v">operators who know which workflow is broken and want it fixed right the first time.</div></div></div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="c-card">
+        <div class="c-img" style="background-image:url('https://dashboard.katalyst-crm.com/files/t1/3575d695eb502b193e3e41e9d0516dbc.jpg')"><span class="c-img-label">03</span></div>
+        <div class="c-body">
+          <span class="no">03</span>
+          <h3>AI Implementation, Launch &amp; Scale</h3>
+          <span class="tag">Confident deployment, measurable lift.</span>
+          <p class="desc">Done for you, with you, or with your vendors. Deployment, role-specific training, KPI dashboards, and a 30-day review.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a deployed AI stack, a trained team, a KPI plan, and a scaling roadmap.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to ship who want a partner through go-live.</div></div></div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="c-card">
+        <div class="c-img" style="background-image:url('https://dashboard.katalyst-crm.com/files/t1/191905ee3f14a0236ddf9efe7dd21375.jpg')"><span class="c-img-label">04</span></div>
+        <div class="c-body">
+          <span class="no">04</span>
+          <h3>AI Continuous Automation Retainer</h3>
+          <span class="tag">A senior AI partner without the senior hire.</span>
+          <p class="desc">Monthly: one or two new workflows deployed, ongoing KPI review, leadership enablement, and a quarterly impact summary.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">continuous deployment, monthly strategy sessions, and a quarterly ROI report.</div></div><div><div class="k">Best for</div><div class="v">scaling businesses that need AI capacity without adding $250K in headcount.</div></div></div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="c-card">
+        <div class="c-img" style="background-image:url('https://dashboard.katalyst-crm.com/files/t1/19f876524221f5050527d1cf21a60e91.jpg')"><span class="c-img-label">05</span></div>
+        <div class="c-body">
+          <span class="no">05</span>
+          <h3>AI Confidence Lab</h3>
+          <span class="tag">Turns AI fear into team capability.</span>
+          <p class="desc">Live or recorded training built around your actual workflows. Not a generic ChatGPT 101 deck.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a custom training session, an AI Quick Start Guide, and an objection-handling Q&amp;A.</div></div><div><div class="k">Best for</div><div class="v">teams that need confidence and a common language before any rollout.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="c-arrow c-prev" id="svcPrev" aria-label="Previous">←</button>
+      <div class="c-dots" id="svcDots"></div>
+      <button class="c-arrow c-next" id="svcNext" aria-label="Next">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- 8 FRAMEWORK -->
+<section class="sec framework" id="framework">
+  <div class="wrap">
+    <div class="fw-head reveal">
+      <div class="sec-head"><span class="eyebrow on-dark">the futureflow profit framework</span><h2>Forecast. Frame. Flow. Fit. Fuel.</h2></div>
+      <p class="fw-sub">The exact order Helen runs every project — because skipping a step is what makes most AI implementations underdeliver.</p>
+    </div>
+    <div class="fw-grid reveal">
+      <div class="fw-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M7.5 12.5v-2M10.5 12.5v-4M13.5 12.5v-3"/></svg></div>
+        <span class="nm">Forecast</span><span class="tagl">Find where the profit is leaking.</span>
+        <p class="desc">Workflows audited, costs traced, hours quantified, AI readiness scored honestly. The step most consultants skip — and the one that decides whether everything after works.</p>
+        <div class="have"><b>You'll have</b>a quantified Profit Journey Roadmap.</div>
+      </div>
+      <div class="fw-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 7V3h4M17 3h4v4M21 17v4h-4M7 21H3v-4"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <span class="nm">Frame</span><span class="tagl">Choose the highest-ROI starting point.</span>
+        <p class="desc">Not the most exciting workflow — the one with the cleanest math and fastest payback. Early wins fund the rest.</p>
+        <div class="have"><b>You'll have</b>a sequenced priority list and a first project with a breakeven date.</div>
+      </div>
+      <div class="fw-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5 10.5 16M17 7.5 13.5 16M7.5 6h9"/></svg></div>
+        <span class="nm">Flow</span><span class="tagl">Turn workflows into revenue engines.</span>
+        <p class="desc">Every decision, handoff, and data point mapped. AI specified to fit the workflow, not the reverse. Complexity becomes a diagram a CFO can sign off on.</p>
+        <div class="have"><b>You'll have</b>a visualized workflow, a data plan, and an implementation method.</div>
+      </div>
+      <div class="fw-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 12h2M10 12h10M4 17h10M18 17h2"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="17" r="2"/></svg></div>
+        <span class="nm">Fit</span><span class="tagl">Choose the tool last, not first.</span>
+        <p class="desc">Only now do tools get evaluated — against your goals, your team's capacity, your budget. The newest tool rarely wins. The right one always does.</p>
+        <div class="have"><b>You'll have</b>a vetted tool recommendation matched to adoption, ROI, and sustainability.</div>
+      </div>
+      <div class="fw-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 5 13.5h5L11 22l8-11.5h-5L13 2z"/></svg></div>
+        <span class="nm">Fuel</span><span class="tagl">Implement, train, measure, scale.</span>
+        <p class="desc">Deployment, role-specific training, KPI tracking, a 30-day review. Then it loops back to Forecast on the next workflow. The compounding starts.</p>
+        <div class="have"><b>You'll have</b>a live system, a trained team, a tracking plan, and the next priority queued.</div>
+      </div>
+    </div>
+    <div class="cta-row reveal" style="justify-content:center"><a href="#fitcall" class="btn">See it applied to your business →</a><a href="#fitcall" class="link-more on-dark">Get the one-pager (PDF) <span>→</span></a></div>
+  </div>
+</section>
+
+<!-- 9 IS THIS FOR YOU -->
+<section class="sec" id="fit">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">is this for you?</span><h2>Who this works for. Who it doesn't.</h2></div>
+    <div class="fit-cols reveal">
+      <div class="fit-card yes">
+        <h3>This is for you if</h3>
+        <ul>
+          <li><span class="mk">✓</span><span>You run a business with $3M+ in revenue or budget and a team of 10–200.</span></li>
+          <li><span class="mk">✓</span><span>Manual workflows are eating margin — and you can name one that's been on the fix-it list for a year.</span></li>
+          <li><span class="mk">✓</span><span>You've tried AI tools and the rollout stalled, or you don't trust the vendors enough to start.</span></li>
+          <li><span class="mk">✓</span><span>You want a partner who stays through implementation, not one who hands you a deck and leaves.</span></li>
+          <li><span class="mk">✓</span><span>You expect measurable ROI in 90 days, and believe AI should make your team more valuable, not replace them.</span></li>
+        </ul>
+      </div>
+      <div class="fit-card no">
+        <h3>This is not for you if</h3>
+        <ul>
+          <li><span class="mk">✕</span><span>You're a solopreneur or pre-revenue founder looking for free advice.</span></li>
+          <li><span class="mk">✕</span><span>You want a tool recommendation without diagnosing the workflow. That's the work that fails.</span></li>
+          <li><span class="mk">✕</span><span>You're shopping for the cheapest hourly rate.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="wrap">
+    <div class="faq reveal">
+      <span class="eyebrow on-red">faq</span>
+      <h3>Frequently asked, honestly answered</h3>
+      <details><summary>Will AI replace my team? <span class="pl">+</span></summary><div class="ans">No. AI handles repetition; your team handles judgment, relationships, and strategy. Behind the 200% lift and 49,000 hours, no roles were eliminated — capacity expanded.</div></details>
+      <details><summary>How is this different from a Big 4 firm? <span class="pl">+</span></summary><div class="ans">Helen spent 11 years inside that world. She kept the methodology and dropped the overhead. You get a senior operator on the work, not a partner who sells it and a junior who runs it.</div></details>
+      <details><summary>My IT team says they can do this internally. <span class="pl">+</span></summary><div class="ans">They can run the build. They rarely have time to design the sequence across the business. Helen architects the roadmap; IT implements it with her oversight. The roles don't compete.</div></details>
+      <details><summary>What if we only need one workflow fixed? <span class="pl">+</span></summary><div class="ans">That's the AI Automation Flow Design package — roughly four to six weeks, one workflow, ROI-quantified before build.</div></details>
+      <details><summary>How fast do we see returns? <span class="pl">+</span></summary><div class="ans">The first quick win is identified in the Assessment and typically live within 60–90 days. Compounding gains follow.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">about helen</span>
+        <h2>The four hundredth application. The silence. The framework that came out of it.</h2>
+        <p class="lede">She hit submit on the four hundredth job application and waited for the same silence as the 399 before it.</p>
+        <p>Thirty-five years in technology. Senior leadership at Lockheed Martin, a director role at Deloitte, programs for the DoD, Fortune 500 financials, and Wall Street. Then two layoffs in a market that suddenly had no use for any of it. The credentials weren't the problem — they were the point. And they were no longer enough.</p>
+        <div class="about-quote">
+          <p>In the age of AI, be human. The technology is the tool. The architecture is the work. The people are always the point.</p>
+          <div class="who">— Helen Caron</div>
+        </div>
+        <details class="story">
+          <summary>Read the full story <span class="pl">+</span></summary>
+          <div class="story-body">
+            <p>Two things happened at once: a diagnosis for the ADHD and PTSD running quietly behind every overdelivered project, and a return to the work that made her fall for the field — an expert system she'd built in the early 1990s to help diagnose schizophrenia, before AI was a term you could put on a website.</p>
+            <p>She stopped applying. She got certified as an AI-Assisted Consultant, Implementor, and Data Specialist, and studied where AI worked in mid-market businesses and where it failed. The pattern was consistent, and it wasn't technical: bad processes automated faster, tools chosen before workflows, senior people excluded from rollouts, adoption assumed instead of designed. Sequencing failures, every time.</p>
+            <p>Helen had spent 35 years doing exactly the work that fixes them. The FutureFlow Profit Framework is the sequence she'd already used inside Lockheed, Deloitte, and the cybersecurity start-up where it produced the 200% sales lift — now formalized for the mid-sized businesses living the chaos she used to fix for everyone else.</p>
+          </div>
+        </details>
+      </div>
+      <div class="about-side reveal">
+        <div class="ph"></div>
+        <p class="run">She runs HugMuni Solutions LLC out of Pennsylvania — a Woman-Owned Business, mostly remote, with clients across the U.S. and worldwide. She still builds her frameworks by hand, in a notebook, before any of it touches a slide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 MISSION -->
+<section class="sec mission" id="mission">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow on-red">mission &amp; vision</span></div>
+    <div class="mv-grid reveal">
+      <div class="mv"><h3>Mission</h3><p>Build AI-powered, human-first systems for mid-sized businesses — so the technology grows the margin, the team gains capacity, and nobody gets replaced.</p></div>
+      <div class="mv"><h3>Vision</h3><p>A market where mid-sized businesses don't fear AI, don't waste it, and don't get sold tools they can't run — where the operator and the technology finally work together, by design.</p></div>
+      <div class="mv"><h3>The big why</h3><p>AI will reshape every business in the next five years, and most SMBs are about to spend on the wrong sequence. Helen's job is to make sure her clients spend on the right one — and still run the business five years from now, with more capacity, not less.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 FIT CALL -->
+<section class="sec fitcall" id="fitcall">
+  <div class="wrap">
+    <div class="fitcall-grid">
+      <div class="reveal"><span class="eyebrow">free 30-minute fit call</span><h2>Start with a conversation. Not a contract.</h2>
+        <div class="fitcall-photo"><div class="ph"></div></div>
+      </div>
+      <div class="reveal">
+        <p class="body">Most AI consultations are sales calls in disguise. This one isn't. Book a 30-minute fit call and leave with three things:</p>
+        <ol>
+          <li><span class="dash">—</span><span>An honest readiness signal — green, yellow, or red — with the reason.</span></li>
+          <li><span class="dash">—</span><span>One workflow most likely leaking margin, to investigate this week.</span></li>
+          <li><span class="dash">—</span><span>A clear next step, which may or may not involve Helen.</span></li>
+        </ol>
+        <p class="fine">Helen runs the call herself — not an SDR, not a chatbot. If there's a fit, she sends a one-page summary. If there isn't, she tells you directly. No pitch, no pressure.</p>
+        <div class="cta-row"><a href="#" class="btn">Book the 30-minute fit call →</a><a href="#" class="link-more">Claim your free conversation <span>→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 FINAL -->
+<section class="sec final" id="final">
+  <div class="wrap reveal">
+    <h2>Stop buying tools. Start building the system.</h2>
+    <p class="body">You've already invested in the tools, the talent, the time. Now invest in the sequence that makes them work together — and stops the leak quietly costing you margin every quarter.</p>
+    <ul>
+      <li><span class="dash">—</span><span>Find the leak in 30 minutes, free.</span></li>
+      <li><span class="dash">—</span><span>A partner who stays through implementation, not just diagnosis.</span></li>
+      <li><span class="dash">—</span><span>A system your team helps design, so adoption isn't a battle.</span></li>
+      <li><span class="dash">—</span><span>Impact you can show on the next quarterly review.</span></li>
+    </ul>
+    <div class="cta-row"><a href="#fitcall" class="btn">Book your AI Profit Assessment →</a><a href="#about" class="link-more on-dark">Read Helen's story first <span>→</span></a></div>
+  </div>
+</section>
+
+<!-- 14 FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-logo reveal">
+      <img class="lockup big" src="https://dashboard.katalyst-crm.com/files/t1/Group%202.png" alt="Helen Caron — HC monogram">
+    </div>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <p>HugMuni Solutions LLC — a Woman-Owned Business in Pennsylvania. Mostly remote, with clients across the U.S. and worldwide.</p>
+      </div>
+      <div class="foot-col"><h5>Navigate</h5><a href="#problem">The problem</a><a href="#services">Services</a><a href="#framework">The framework</a><a href="#fit">Is this for you</a><a href="#about">About Helen</a></div>
+      <div class="foot-col"><h5>Start here</h5><a href="#fitcall">Book a 30-min fit call</a><a href="#fitcall">AI Profit Assessment</a><a href="#mission">Mission &amp; vision</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 HugMuni Solutions LLC. All rights reserved.</span><span>Pennsylvania · Remote · Worldwide</span></div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{menu.classList.toggle('open');burger.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');}));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* Carousel */
+  (function(){
+    const track=document.getElementById('svcCarousel');
+    const cards=track.querySelectorAll('.c-card');
+    const total=cards.length;
+    let cur=0;
+    const dotsWrap=document.getElementById('svcDots');
+    for(let i=0;i<total;i++){const d=document.createElement('button');d.className='c-dot'+(i===0?' active':'');d.setAttribute('aria-label','Slide '+(i+1));d.addEventListener('click',()=>go(i));dotsWrap.appendChild(d);}
+    const dots=dotsWrap.querySelectorAll('.c-dot');
+    function go(n){cur=n;track.style.transform='translateX(-'+cur*100+'%)';dots.forEach((d,i)=>d.classList.toggle('active',i===cur));}
+    document.getElementById('svcPrev').addEventListener('click',()=>go((cur-1+total)%total));
+    document.getElementById('svcNext').addEventListener('click',()=>go((cur+1)%total));
+    let sx=0,dx=0;track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;dx=0;},{passive:true});
+    track.addEventListener('touchmove',e=>{dx=e.touches[0].clientX-sx;},{passive:true});
+    track.addEventListener('touchend',()=>{if(dx<-40)go(Math.min(cur+1,total-1));else if(dx>40)go(Math.max(cur-1,0));});
+  })();
+</script>
+</body>
+</html>
