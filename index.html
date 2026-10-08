@@ -64,7 +64,7 @@
   nav.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--red);transition:width .25s}
   nav.menu a:hover::after{width:100%}
   nav.menu a.nav-cta{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--ink)!important;opacity:1!important;border:0;padding:15px 24px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;transition:background .25s,transform .25s;line-height:1.2}nav.menu a.nav-cta:hover{background:rgba(255,255,255,.88);transform:translateY(-2px)}nav.menu a.nav-cta::after{display:none}
-  .brand .lockup{filter:url(#hc-red)}
+  .brand .lockup{filter:brightness(0) invert(1)}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
   .burger span{width:26px;height:2px;background:#fff;display:block}
 
@@ -322,7 +322,7 @@
   footer.site{background:var(--ink);color:#fff;padding:72px 0 32px}
   .foot-logo{display:flex;align-items:center;gap:22px}
   .lockup{display:block;height:46px;width:auto}
-  .foot-logo .lockup.big{height:46px;filter:url(#hc-red)}
+  .foot-logo .lockup.big{height:46px}
   .foot-logo .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);letter-spacing:.04em;line-height:1}
   .foot-logo .wordmark small{display:block;font-size:11px;letter-spacing:.32em;font-weight:500;color:rgba(255,255,255,.55);margin-top:10px}
   .brand .emblem{width:38px;height:38px}
@@ -370,13 +370,6 @@
 </style>
 </head>
 <body>
-
-<!-- Brand-red recolor filter for the HC logo (floods the logo shape with brand red, preserves transparency) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <filter id="hc-red" color-interpolation-filters="sRGB">
-    <feColorMatrix type="matrix" values="0 0 0 0 0.925  0 0 0 0 0.231  0 0 0 0 0.169  0 0 0 1 0"/>
-  </filter>
-</svg>
 
 <header class="nav">
   <div class="nav-inner">
