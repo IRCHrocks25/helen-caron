@@ -64,7 +64,7 @@
   nav.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--red);transition:width .25s}
   nav.menu a:hover::after{width:100%}
   nav.menu a.nav-cta{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--ink)!important;opacity:1!important;border:0;padding:15px 24px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;transition:background .25s,transform .25s;line-height:1.2}nav.menu a.nav-cta:hover{background:rgba(255,255,255,.88);transform:translateY(-2px)}nav.menu a.nav-cta::after{display:none}
-  .brand .lockup{filter:brightness(0) invert(1)}
+  .brand .lockup{filter:url(#hc-red)}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
   .burger span{width:26px;height:2px;background:#fff;display:block}
 
@@ -322,7 +322,7 @@
   footer.site{background:var(--ink);color:#fff;padding:72px 0 32px}
   .foot-logo{display:flex;align-items:center;gap:22px}
   .lockup{display:block;height:46px;width:auto}
-  .foot-logo .lockup.big{height:46px}
+  .foot-logo .lockup.big{height:46px;filter:url(#hc-red)}
   .foot-logo .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3vw,36px);letter-spacing:.04em;line-height:1}
   .foot-logo .wordmark small{display:block;font-size:11px;letter-spacing:.32em;font-weight:500;color:rgba(255,255,255,.55);margin-top:10px}
   .brand .emblem{width:38px;height:38px}
@@ -371,6 +371,13 @@
 </head>
 <body>
 
+<!-- Brand-red recolor filter for the HC logo (floods the logo shape with brand red, preserves transparency) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="hc-red" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.925  0 0 0 0 0.231  0 0 0 0 0.169  0 0 0 1 0"/>
+  </filter>
+</svg>
+
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="#top"><img class="lockup" src="https://dashboard.katalyst-crm.com/files/t1/Group%202.png" alt="Helen Caron"></a>
@@ -399,12 +406,13 @@
       <span class="eyebrow on-dark">AI systems for mid-sized business</span>
       <h1>You don't need more AI tools. You need a system that <span class="accent">finally works.</span></h1>
       <div class="sub">
-        <p>You've bought the platforms and run the pilots. The problem was never the technology.</p>
-        <p>Helen Caron designs AI systems that run inside the business — built around the people who use them. 35 years in tech, with senior roles at Lockheed Martin and Deloitte.</p>
+        <p>You've bought the platforms. Run the pilots. Maybe hired a consultant who left a deck behind.</p>
+        <p>The problem was never the technology. Helen Caron designs AI systems that run inside the business — built around the people who actually use them.</p>
+        <p>35 years in tech. Leadership roles at Lockheed Martin and Deloitte. One framework, built for mid-sized businesses that need this to work the first time.</p>
       </div>
       <div class="cta-row">
         <a href="#fitcall" class="btn">Book your AI Profit Assessment →</a>
-        <a href="#framework" class="ghost">See the framework <span class="arr">→</span></a>
+        <a href="#framework" class="ghost">See the framework (4-min read) <span class="arr">→</span></a>
       </div>
     </div>
   </div>
@@ -422,8 +430,9 @@
       <div class="cred-text reveal">
         <span class="eyebrow">credibility snapshot</span>
         <h2>Built in the trenches. Not in decks.</h2>
-        <p>Helen has spent 35 years inside the systems most consultants only diagram — including her first AI expert system in the early 1990s, before AI was a marketing term. <strong>11 years at a Big 4 firm, 23 in aerospace and defense, senior leadership at Lockheed Martin and Deloitte.</strong></p>
-        <p>She's run the full software lifecycle, from systems engineer to senior director. She can do the math on your margin and design the workflow in the same meeting.</p>
+        <p>Helen has spent 35 years inside the systems most consultants only diagram. She built her first AI expert system in the early 1990s, to help diagnose schizophrenia, before AI was a marketing term. Since then: <strong>11 years at a Big 4 firm, 23 across aerospace and defense, and leadership at Lockheed Martin and Deloitte.</strong> A Master's in Computer Engineering, AI concentration. Certified AI consultant and implementor.</p>
+        <p>In the last five years alone: one client's sales up 200% and $7M in new revenue. Another rebuild reclaimed 49,000 hours. More than $600K saved across engagements.</p>
+        <p>She's the rare consultant who has run the full software lifecycle, from systems engineer to senior director. She can do the math on your margin and design the workflow in the same meeting.</p>
       </div>
     </div>
   </div>
@@ -437,20 +446,20 @@
         <div class="reveal">
           <span class="eyebrow">problem diagnosis</span>
           <h2>You're not behind on AI. You're buried under it.</h2>
-          <p class="intro">You bought the tools, ran the pilots, maybe hired a consultant. Eighteen months later, here's the reality:</p>
+          <p class="intro">You bought the tools. Ran the pilots. Maybe hired a consultant. Eighteen months later, here's what the business actually looks like:</p>
         </div>
         <ul class="leaks reveal">
-          <li><span class="dash">—</span><span>Three AI subscriptions across three teams, none of them talking to each other.</span></li>
-          <li><span class="dash">—</span><span>A process automated before anyone mapped it — so it fails faster than before.</span></li>
-          <li><span class="dash">—</span><span>A finance lead who can't tell which workflow is leaking margin and which is just annoying.</span></li>
-          <li><span class="dash">—</span><span>New hires who assume AI is in the stack; senior staff quietly worried it's coming for their jobs.</span></li>
+          <li><span class="dash">—</span><span>Three teams, three AI subscriptions, none of them talking to each other.</span></li>
+          <li><span class="dash">—</span><span>A process automated before anyone mapped it, so now it fails faster than before.</span></li>
+          <li><span class="dash">—</span><span>A finance lead who can't tell you which workflow is leaking margin and which is just annoying.</span></li>
+          <li><span class="dash">—</span><span>New hires who assume AI is in the stack. Senior staff quietly worried it's coming for their jobs.</span></li>
           <li><span class="dash">—</span><span>Another vendor email every week, promising the thing that finally fixes it.</span></li>
         </ul>
         <div class="punch reveal">
-          <p>You don't need another tool. Adding AI to a broken process doesn't fix it — <span class="em">it breaks it at machine speed.</span></p>
-          <p>That's Helen's work: process first, then AI, people at the center. The only sequence she's seen work in 35 years.</p>
+          <p>You don't need another tool. You need someone who has run programs at this scale and knows the truth: adding AI to a broken process doesn't fix the process. <span class="em">It breaks it at machine speed.</span></p>
+          <p>That's Helen's work. Process first. Then AI. People at the center the whole way through. It's the only sequence she's seen work in 35 years of doing it.</p>
         </div>
-        <div class="cta-row reveal"><a href="#fitcall" class="btn">Find your profit leaks →</a></div>
+        <div class="cta-row reveal"><a href="#fitcall" class="btn">Find your profit leaks. Book the assessment →</a></div>
       </div>
       <div class="problem-photo reveal">
         <div class="ph"></div>
@@ -468,8 +477,8 @@
         <span class="eyebrow">proof</span>
         <h2>What changed when the system finally worked.</h2>
       </div>
-      <div class="quote-card"><div class="mark">"</div><p>We increased sales 200%, added $7M in revenue, and lifted retention 20%. She doesn't hand over a strategy and leave — she stays in the room until it ships.</p><div class="who">Chief Product Officer, cybersecurity company</div></div>
-      <div class="quote-card"><div class="mark">"</div><p>Onboarding took up to eight months. Helen redesigned and automated it. We went from eight months to forty-five days, and saved 49,000 hours.</p><div class="who">Managing Director, enterprise software practice</div></div>
+      <div class="quote-card"><div class="mark">"</div><p>We increased sales 200%, added $7M in revenue, and lifted retention 20%. She doesn't hand over a strategy and leave, she stays in the room until it ships.</p><div class="who">Chief Product Officer, cybersecurity company</div></div>
+      <div class="quote-card"><div class="mark">"</div><p>Onboarding took up to eight months. Helen redesigned it and automated the setup. We went from eight months to forty-five days, and saved 49,000 hours.</p><div class="who">Managing Director, enterprise software practice</div></div>
       <div class="quote-card"><div class="mark">"</div><p>She knows AI deeply, but the rare thing is how she explains it. No jargon, no fear. Our team went from seeing AI as a threat to using it daily.</p><div class="who">Executive Director, nonprofit foundation</div></div>
     </div>
   </div>
@@ -480,12 +489,12 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow on-dark">the numbers</span><h2>The receipts.</h2></div>
     <div class="num-grid reveal">
-      <div class="num"><div class="n">200%</div><div class="l">Sales lift for one cybersecurity client through workflow redesign and AI automation.</div></div>
-      <div class="num"><div class="n">$7M</div><div class="l">Net new revenue for that same client during the engagement.</div></div>
-      <div class="num"><div class="n">49,000</div><div class="l">Hours reclaimed by redesigning one onboarding workflow — before any AI.</div></div>
-      <div class="num"><div class="n">8 → 45</div><div class="l">Months to days. The same rebuild, time-to-live compressed.</div></div>
-      <div class="num"><div class="n">$600K+</div><div class="l">Direct client savings across engagements in the past five years.</div></div>
-      <div class="num"><div class="n">35</div><div class="l">Years inside the systems most consultants only describe.</div></div>
+      <div class="num"><div class="n">200%</div><div class="l">Sales increase delivered for one cybersecurity client through workflow redesign and AI-supported automation.</div></div>
+      <div class="num"><div class="n">$7M</div><div class="l">Net new revenue unlocked for that same client during the engagement.</div></div>
+      <div class="num"><div class="n">49,000</div><div class="l">Hours reclaimed by redesigning a single onboarding workflow before any AI was applied.</div></div>
+      <div class="num"><div class="n">8 → 45</div><div class="l">Months to days. The same rebuild compressed time-to-live from eight months to forty-five days.</div></div>
+      <div class="num"><div class="n">$600K+</div><div class="l">Direct client cost savings generated across engagements in the past five years.</div></div>
+      <div class="num"><div class="n">35</div><div class="l">Years inside the systems most consultants only describe. The reason none of the above is theoretical.</div></div>
     </div>
   </div>
 </section>
@@ -497,12 +506,12 @@
     <div class="cmp reveal">
       <div class="ch bad">What usually happens</div>
       <div class="ch good">What happens with Helen</div>
-      <div class="row" style="display:contents"><div class="cell bad">You're sold a tool, then told to fit it into your business.</div><div class="cell good">The goal comes first. The tool gets chosen last, once the workflow says what it needs.</div></div>
-      <div class="row" style="display:contents"><div class="cell bad">A consultant maps your process, hands you a deck, and vanishes at implementation.</div><div class="cell good">Helen runs the whole arc, Forecast through Fuel — including training and KPI tracking after launch.</div></div>
-      <div class="row" style="display:contents"><div class="cell bad">AI gets bolted onto a broken process, which now fails at machine speed.</div><div class="cell good">Process gaps get fixed first. At Deloitte, that one principle saved 49,000 hours.</div></div>
-      <div class="row" style="display:contents"><div class="cell bad">Your team is told to embrace the tool. Adoption stalls by week three.</div><div class="cell good">Your team helps design the workflow. Adoption is built in, not bolted on.</div></div>
-      <div class="row" style="display:contents"><div class="cell bad">Success is measured by tools deployed.</div><div class="cell good">Success is measured by margin, hours reclaimed, and your next board deck.</div></div>
-      <div class="row" style="display:contents"><div class="cell bad">AI is treated like an IT project — one problem at a time.</div><div class="cell good">AI is treated as a profit system, each automation building on the last.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">You're sold a tool, then asked to figure out how to fit it into your business.</div><div class="cell good">The business goal comes first. The tool gets chosen near the end, once the workflow tells us what it needs.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">A consultant maps your process, hands you a deck, and disappears at implementation.</div><div class="cell good">Helen runs the whole arc Forecast through Fuel including training and KPI tracking after launch.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">AI gets bolted onto a broken process, which now fails at machine speed.</div><div class="cell good">Process gaps get fixed first. At Deloitte, that one principle saved 49,000 hours before any AI was deployed.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">Your team is told to embrace the tool. Adoption stalls in week three.</div><div class="cell good">Your team helps design the workflow. Adoption is built in, not bolted on.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">Success is measured by tools deployed.</div><div class="cell good">Success is measured by margin, hours reclaimed, and the KPIs on your next board deck.</div></div>
+      <div class="row" style="display:contents"><div class="cell bad">AI is treated like an IT project — one problem at a time.</div><div class="cell good">AI is treated as a profit system, sequenced so each automation builds on the last.</div></div>
     </div>
     <div class="cta-row reveal"><a href="#fitcall" class="btn">Book your AI Profit Assessment →</a><a href="#fitcall" class="link-more">Start with a 30-min fit call <span>→</span></a></div>
   </div>
@@ -513,7 +522,7 @@
   <div class="wrap reveal">
     <div class="head-2col">
       <div class="sec-head"><span class="eyebrow">services</span><h2>Five entry points. One system.</h2></div>
-      <p class="svc-intro">Each service is a stage of the FutureFlow Profit Framework. Most clients start with the Assessment, then move forward as the data warrants. Nothing gets forced.</p>
+      <p class="svc-intro">Each service is a stage of the FutureFlow Profit Framework. Most clients start with the Assessment to find the leak, then move forward as the data warrants. Nothing gets forced.</p>
     </div>
   </div>
   <div class="carousel-wrap reveal">
@@ -525,8 +534,8 @@
           <span class="no">01</span>
           <h3>AI Profit Assessment Intensive</h3>
           <span class="tag">The starting line.</span>
-          <p class="desc">Maps where profit is leaking, where AI recovers margin fastest, and what to fix before any tool is bought.</p>
-          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a Profit Journey Roadmap, a quick-win recommendation, and a follow-up review.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to invest who won't spend before they know the real ROI.</div></div></div>
+          <p class="desc">A diagnostic that maps where profit is leaking, where AI recovers the most margin fastest, and what to fix before any tool is bought.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a custom Profit Journey Roadmap, a quick-win recommendation, and a follow-up review.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to invest who refuse to spend before they know where the real ROI is.</div></div></div>
         </div>
       </div>
       <!-- Card 2 -->
@@ -535,9 +544,9 @@
         <div class="c-body">
           <span class="no">02</span>
           <h3>AI Automation Flow Design</h3>
-          <span class="tag">Workflows become revenue engines.</span>
-          <p class="desc">One high-friction workflow, turned into a clean, ROI-quantified automation blueprint, ready to build.</p>
-          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a workflow map, an ROI brief, and a breakeven timeline.</div></div><div><div class="k">Best for</div><div class="v">operators who know which workflow is broken and want it fixed right the first time.</div></div></div>
+          <span class="tag">Where workflows become revenue engines.</span>
+          <p class="desc">One high-friction workflow, turned into a clean, mapped, ROI-quantified automation blueprint ready for build.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a custom workflow map, an automation ROI brief, and a defined breakeven timeline.</div></div><div><div class="k">Best for</div><div class="v">operators who know which workflow is broken and want it solved correctly the first time.</div></div></div>
         </div>
       </div>
       <!-- Card 3 -->
@@ -547,8 +556,8 @@
           <span class="no">03</span>
           <h3>AI Implementation, Launch &amp; Scale</h3>
           <span class="tag">Confident deployment, measurable lift.</span>
-          <p class="desc">Done for you, with you, or with your vendors. Deployment, role-specific training, KPI dashboards, and a 30-day review.</p>
-          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a deployed AI stack, a trained team, a KPI plan, and a scaling roadmap.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to ship who want a partner through go-live.</div></div></div>
+          <p class="desc">Done for you, with you, or co-delivered with your vendors. Deployment, role-specific training, KPI dashboards, and a 30-day post-launch review.</p>
+          <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">a deployed AI stack, a trained team, a KPI plan, and a scaling roadmap.</div></div><div><div class="k">Best for</div><div class="v">leaders ready to ship who want a partner that stays through go-live.</div></div></div>
         </div>
       </div>
       <!-- Card 4 -->
@@ -558,7 +567,7 @@
           <span class="no">04</span>
           <h3>AI Continuous Automation Retainer</h3>
           <span class="tag">A senior AI partner without the senior hire.</span>
-          <p class="desc">Monthly: one or two new workflows deployed, ongoing KPI review, leadership enablement, and a quarterly impact summary.</p>
+          <p class="desc">Monthly engagement: one or two new workflows designed and deployed, ongoing KPI review, leadership enablement, quarterly impact summary.</p>
           <div class="svc-meta"><div><div class="k">You leave with</div><div class="v">continuous deployment, monthly strategy sessions, and a quarterly ROI report.</div></div><div><div class="k">Best for</div><div class="v">scaling businesses that need AI capacity without adding $250K in headcount.</div></div></div>
         </div>
       </div>
@@ -593,35 +602,35 @@
       <div class="fw-card">
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M7.5 12.5v-2M10.5 12.5v-4M13.5 12.5v-3"/></svg></div>
         <span class="nm">Forecast</span><span class="tagl">Find where the profit is leaking.</span>
-        <p class="desc">Workflows audited, costs traced, hours quantified, AI readiness scored honestly. The step most consultants skip — and the one that decides whether everything after works.</p>
+        <p class="desc">Before any tool is chosen: workflows audited, costs traced, hours quantified, AI readiness scored honestly. Most consultants skip it. It's the step that decides whether everything after works.</p>
         <div class="have"><b>You'll have</b>a quantified Profit Journey Roadmap.</div>
       </div>
       <div class="fw-card">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 7V3h4M17 3h4v4M21 17v4h-4M7 21H3v-4"/><circle cx="12" cy="12" r="3.5"/></svg></div>
         <span class="nm">Frame</span><span class="tagl">Choose the highest-ROI starting point.</span>
-        <p class="desc">Not the most exciting workflow — the one with the cleanest math and fastest payback. Early wins fund the rest.</p>
+        <p class="desc">Not the most exciting workflow. The one with the cleanest math and the fastest payback. Early wins fund the rest of the program.</p>
         <div class="have"><b>You'll have</b>a sequenced priority list and a first project with a breakeven date.</div>
       </div>
       <div class="fw-card">
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5 10.5 16M17 7.5 13.5 16M7.5 6h9"/></svg></div>
         <span class="nm">Flow</span><span class="tagl">Turn workflows into revenue engines.</span>
-        <p class="desc">Every decision, handoff, and data point mapped. AI specified to fit the workflow, not the reverse. Complexity becomes a diagram a CFO can sign off on.</p>
-        <div class="have"><b>You'll have</b>a visualized workflow, a data plan, and an implementation method.</div>
+        <p class="desc">Every decision, handoff, and data point mapped. AI specified to fit the workflow, not the other way around. Complexity becomes a diagram a CFO can sign off on.</p>
+        <div class="have"><b>You'll have</b>a visualized workflow, a data plan, and a defined implementation method.</div>
       </div>
       <div class="fw-card">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 12h2M10 12h10M4 17h10M18 17h2"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="17" r="2"/></svg></div>
         <span class="nm">Fit</span><span class="tagl">Choose the tool last, not first.</span>
-        <p class="desc">Only now do tools get evaluated — against your goals, your team's capacity, your budget. The newest tool rarely wins. The right one always does.</p>
+        <p class="desc">Now, and only now tools get evaluated. Against your goals, your team's capacity, your budget. The newest tool rarely wins. The right one always does.</p>
         <div class="have"><b>You'll have</b>a vetted tool recommendation matched to adoption, ROI, and sustainability.</div>
       </div>
       <div class="fw-card">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 5 13.5h5L11 22l8-11.5h-5L13 2z"/></svg></div>
         <span class="nm">Fuel</span><span class="tagl">Implement, train, measure, scale.</span>
-        <p class="desc">Deployment, role-specific training, KPI tracking, a 30-day review. Then it loops back to Forecast on the next workflow. The compounding starts.</p>
+        <p class="desc">Deployment, role-specific training, KPI tracking, a 30-day review. Then the framework loops back to Forecast on the next workflow. The compounding starts.</p>
         <div class="have"><b>You'll have</b>a live system, a trained team, a tracking plan, and the next priority queued.</div>
       </div>
     </div>
-    <div class="cta-row reveal" style="justify-content:center"><a href="#fitcall" class="btn">See it applied to your business →</a><a href="#fitcall" class="link-more on-dark">Get the one-pager (PDF) <span>→</span></a></div>
+    <div class="cta-row reveal" style="justify-content:center"><a href="#fitcall" class="btn">See the framework applied to your business →</a><a href="#fitcall" class="link-more on-dark">Get the one-pager (PDF) <span>→</span></a></div>
   </div>
 </section>
 
@@ -633,18 +642,18 @@
       <div class="fit-card yes">
         <h3>This is for you if</h3>
         <ul>
-          <li><span class="mk">✓</span><span>You run a business with $3M+ in revenue or budget and a team of 10–200.</span></li>
-          <li><span class="mk">✓</span><span>Manual workflows are eating margin — and you can name one that's been on the fix-it list for a year.</span></li>
-          <li><span class="mk">✓</span><span>You've tried AI tools and the rollout stalled, or you don't trust the vendors enough to start.</span></li>
+          <li><span class="mk">✓</span><span>You run a business with $1M+ in revenue or budget and a team of 10–200.</span></li>
+          <li><span class="mk">✓</span><span>Manual workflows are eating margin, and you can name one that's been on the fix-it list for a year.</span></li>
+          <li><span class="mk">✓</span><span>You've tried AI tools and the rollout stalled, or you haven't started because you don't trust the vendors.</span></li>
           <li><span class="mk">✓</span><span>You want a partner who stays through implementation, not one who hands you a deck and leaves.</span></li>
-          <li><span class="mk">✓</span><span>You expect measurable ROI in 90 days, and believe AI should make your team more valuable, not replace them.</span></li>
+          <li><span class="mk">✓</span><span>You expect measurable ROI in the first 90 days, and you believe AI should make your team more valuable, not replace them.</span></li>
         </ul>
       </div>
       <div class="fit-card no">
         <h3>This is not for you if</h3>
         <ul>
           <li><span class="mk">✕</span><span>You're a solopreneur or pre-revenue founder looking for free advice.</span></li>
-          <li><span class="mk">✕</span><span>You want a tool recommendation without diagnosing the workflow. That's the work that fails.</span></li>
+          <li><span class="mk">✕</span><span>You want a quick tool recommendation without diagnosing the underlying workflow. That's the work that fails, and Helen won't take it.</span></li>
           <li><span class="mk">✕</span><span>You're shopping for the cheapest hourly rate.</span></li>
         </ul>
       </div>
@@ -658,11 +667,11 @@
     <div class="faq reveal">
       <span class="eyebrow on-red">faq</span>
       <h3>Frequently asked, honestly answered</h3>
-      <details><summary>Will AI replace my team? <span class="pl">+</span></summary><div class="ans">No. AI handles repetition; your team handles judgment, relationships, and strategy. Behind the 200% lift and 49,000 hours, no roles were eliminated — capacity expanded.</div></details>
-      <details><summary>How is this different from a Big 4 firm? <span class="pl">+</span></summary><div class="ans">Helen spent 11 years inside that world. She kept the methodology and dropped the overhead. You get a senior operator on the work, not a partner who sells it and a junior who runs it.</div></details>
-      <details><summary>My IT team says they can do this internally. <span class="pl">+</span></summary><div class="ans">They can run the build. They rarely have time to design the sequence across the business. Helen architects the roadmap; IT implements it with her oversight. The roles don't compete.</div></details>
-      <details><summary>What if we only need one workflow fixed? <span class="pl">+</span></summary><div class="ans">That's the AI Automation Flow Design package — roughly four to six weeks, one workflow, ROI-quantified before build.</div></details>
-      <details><summary>How fast do we see returns? <span class="pl">+</span></summary><div class="ans">The first quick win is identified in the Assessment and typically live within 60–90 days. Compounding gains follow.</div></details>
+      <details><summary>Will AI replace my team? <span class="pl">+</span></summary><div class="ans">Not under this framework. AI handles repetition; your team handles judgment, relationships, and strategy. In the engagements behind the 200% lift and 49,000 hours, no roles were eliminated capacity expanded.</div></details>
+      <details><summary>How is this different from hiring a Big 4 firm? <span class="pl">+</span></summary><div class="ans">Helen spent 11 years inside that world. She kept the methodology and dropped the overhead. You get a senior operator on the work, not a partner who sells it and a junior who runs it.</div></details>
+      <details><summary>My IT team says they can do this internally. <span class="pl">+</span></summary><div class="ans">They can run the build. They rarely have time to design the sequence across the business. Helen is most often hired to architect the roadmap IT then implements with her oversight. The roles don't compete.</div></details>
+      <details><summary>What if we only need one workflow fixed? <span class="pl">+</span></summary><div class="ans">That's the AI Automation Flow Design package, roughly four to six weeks, one workflow, ROI-quantified before build.</div></details>
+      <details><summary>How fast do we see returns? <span class="pl">+</span></summary><div class="ans">The first quick win is identified during the Assessment and is typically live within 60–90 days. Compounding gains follow as the framework cycles.</div></details>
     </div>
   </div>
 </section>
@@ -675,7 +684,7 @@
         <span class="eyebrow">about helen</span>
         <h2>The four hundredth application. The silence. The framework that came out of it.</h2>
         <p class="lede">She hit submit on the four hundredth job application and waited for the same silence as the 399 before it.</p>
-        <p>Thirty-five years in technology. Senior leadership at Lockheed Martin, a director role at Deloitte, programs for the DoD, Fortune 500 financials, and Wall Street. Then two layoffs in a market that suddenly had no use for any of it. The credentials weren't the problem — they were the point. And they were no longer enough.</p>
+        <p>Thirty-five years in technology. Senior leadership at Lockheed Martin. A director role at Deepwatch. Programs for the DoD, Fortune 500 financials, global oil and gas, Wall Street. Then two unexpected layoffs in a market that suddenly had no use for any of it. The credentials weren't the problem, they were the point. And they were no longer enough.</p>
         <div class="about-quote">
           <p>In the age of AI, be human. The technology is the tool. The architecture is the work. The people are always the point.</p>
           <div class="who">— Helen Caron</div>
@@ -683,15 +692,15 @@
         <details class="story">
           <summary>Read the full story <span class="pl">+</span></summary>
           <div class="story-body">
-            <p>Two things happened at once: a diagnosis for the ADHD and PTSD running quietly behind every overdelivered project, and a return to the work that made her fall for the field — an expert system she'd built in the early 1990s to help diagnose schizophrenia, before AI was a term you could put on a website.</p>
-            <p>She stopped applying. She got certified as an AI-Assisted Consultant, Implementor, and Data Specialist, and studied where AI worked in mid-market businesses and where it failed. The pattern was consistent, and it wasn't technical: bad processes automated faster, tools chosen before workflows, senior people excluded from rollouts, adoption assumed instead of designed. Sequencing failures, every time.</p>
-            <p>Helen had spent 35 years doing exactly the work that fixes them. The FutureFlow Profit Framework is the sequence she'd already used inside Lockheed, Deloitte, and the cybersecurity start-up where it produced the 200% sales lift — now formalized for the mid-sized businesses living the chaos she used to fix for everyone else.</p>
+            <p>Two things happened at once. A diagnosis for the ADHD and PTSD that had been quietly running behind every late night and overdelivered project. And, almost on instinct, a return to the work that made her fall for the field an expert system she'd built in the early 1990s to assist in diagnosing schizophrenia, before AI was a term you could put on a website.</p>
+            <p>That memory was the turning point. She stopped applying. She got certified as an AI-Assisted Consultant, Implementor, and Data Specialist, and studied where AI was working in mid-market businesses and where it failed. The pattern was consistent and it wasn't technical. Bad processes automated faster. Tools chosen before workflows. Senior people excluded from rollouts. Adoption assumed instead of designed. Sequencing failures, every time.</p>
+            <p>Helen had spent 35 years doing exactly the work that fixes them: process optimization, change management, full-lifecycle program leadership. The FutureFlow Profit Framework is the sequence she'd already used inside Lockheed, inside Deloitte, inside the cybersecurity start-up where it produced the 200% sales lift. She formalized it for the mid-sized businesses now doing what she was doing in those silent months drowning in the chaos they used to fix for everyone else.</p>
           </div>
         </details>
       </div>
       <div class="about-side reveal">
         <div class="ph"></div>
-        <p class="run">She runs HugMuni Solutions LLC out of Pennsylvania — a Woman-Owned Business, mostly remote, with clients across the U.S. and worldwide. She still builds her frameworks by hand, in a notebook, before any of it touches a slide.</p>
+        <p class="run">She runs HugMuni Solutions LLC out of Pennsylvania a Woman-Owned Business, mostly remote, with clients across the U.S. and increasingly worldwide. She still builds her frameworks by hand, in a notebook, before any of it touches a slide.</p>
       </div>
     </div>
   </div>
@@ -702,9 +711,9 @@
   <div class="wrap">
     <div class="reveal"><span class="eyebrow on-red">mission &amp; vision</span></div>
     <div class="mv-grid reveal">
-      <div class="mv"><h3>Mission</h3><p>Build AI-powered, human-first systems for mid-sized businesses — so the technology grows the margin, the team gains capacity, and nobody gets replaced.</p></div>
-      <div class="mv"><h3>Vision</h3><p>A market where mid-sized businesses don't fear AI, don't waste it, and don't get sold tools they can't run — where the operator and the technology finally work together, by design.</p></div>
-      <div class="mv"><h3>The big why</h3><p>AI will reshape every business in the next five years, and most SMBs are about to spend on the wrong sequence. Helen's job is to make sure her clients spend on the right one — and still run the business five years from now, with more capacity, not less.</p></div>
+      <div class="mv"><h3>Mission</h3><p>To build AI-powered, human-first systems for mid-sized businesses, so the technology grows the margin, the team gains capacity, and nobody gets replaced.</p></div>
+      <div class="mv"><h3>Vision</h3><p>A market where mid-sized businesses don't fear AI, don't waste it, and don't get sold tools they can't run where the operator and the technology finally work together, because someone designed it that way.</p></div>
+      <div class="mv"><h3>The big why</h3><p>AI will reshape every business in the next five years, and most SMBs are about to spend on the wrong sequence. Helen's work is to make sure her clients spend on the right one and that the people who built the business are still running it five years from now, with more capacity, not less.</p></div>
     </div>
   </div>
 </section>
@@ -717,14 +726,14 @@
         <div class="fitcall-photo"><div class="ph"></div></div>
       </div>
       <div class="reveal">
-        <p class="body">Most AI consultations are sales calls in disguise. This one isn't. Book a 30-minute fit call and leave with three things:</p>
+        <p class="body">Most AI consultations are sales calls in disguise. This one isn't. Book a complimentary 30-minute fit call and walk away with three things:</p>
         <ol>
-          <li><span class="dash">—</span><span>An honest readiness signal — green, yellow, or red — with the reason.</span></li>
-          <li><span class="dash">—</span><span>One workflow most likely leaking margin, to investigate this week.</span></li>
-          <li><span class="dash">—</span><span>A clear next step, which may or may not involve Helen.</span></li>
+          <li><span class="dash">—</span><span>An honest readiness signal green, yellow, or red, with the reason.</span></li>
+          <li><span class="dash">—</span><span>One specific workflow most likely leaking margin in your operation, to investigate this week.</span></li>
+          <li><span class="dash">—</span><span>A clear next step which may or may not involve Helen.</span></li>
         </ol>
-        <p class="fine">Helen runs the call herself — not an SDR, not a chatbot. If there's a fit, she sends a one-page summary. If there isn't, she tells you directly. No pitch, no pressure.</p>
-        <div class="cta-row"><a href="#" class="btn">Book the 30-minute fit call →</a><a href="#" class="link-more">Claim your free conversation <span>→</span></a></div>
+        <p class="fine">You get a calendar link within two minutes. Helen runs the call herself, not an SDR, not a chatbot. If there's a fit, she sends a one-page summary of what an engagement looks like. If there isn't, she tells you directly. No pitch. No pressure. No automated follow-up sequence.</p>
+        <div class="cta-row"><a href="#" class="btn">Book the 30-minute fit call →</a><a href="#" class="link-more">Claim your free AI readiness conversation <span>→</span></a></div>
       </div>
     </div>
   </div>
@@ -734,12 +743,11 @@
 <section class="sec final" id="final">
   <div class="wrap reveal">
     <h2>Stop buying tools. Start building the system.</h2>
-    <p class="body">You've already invested in the tools, the talent, the time. Now invest in the sequence that makes them work together — and stops the leak quietly costing you margin every quarter.</p>
+    <p class="body">You've already invested in the tools, the talent, the time. Now invest in the sequence that makes them work together — and stops the leak that's been quietly costing you margin every quarter.</p>
     <ul>
-      <li><span class="dash">—</span><span>Find the leak in 30 minutes, free.</span></li>
-      <li><span class="dash">—</span><span>A partner who stays through implementation, not just diagnosis.</span></li>
-      <li><span class="dash">—</span><span>A system your team helps design, so adoption isn't a battle.</span></li>
-      <li><span class="dash">—</span><span>Impact you can show on the next quarterly review.</span></li>
+      <li><span class="dash">—</span><span>Get a partner who stays through implementation, not just diagnosis.</span></li>
+      <li><span class="dash">—</span><span>Build a system your team helps design, so adoption isn't a battle.</span></li>
+      <li><span class="dash">—</span><span>Measure the impact on the next quarterly review, not in five years.</span></li>
     </ul>
     <div class="cta-row"><a href="#fitcall" class="btn">Book your AI Profit Assessment →</a><a href="#about" class="link-more on-dark">Read Helen's story first <span>→</span></a></div>
   </div>
